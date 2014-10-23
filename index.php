@@ -1,4 +1,4 @@
 <?php
 	include 'Express.php';
 	echo '<pre>';
-	var_dump(json_decode(Express::getOrderInfo('868124032474'),true));
+	var_dump(json_decode(Express::getExpressInfo('868124032474'),true));
