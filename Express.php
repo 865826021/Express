@@ -6,7 +6,7 @@
  * @copyright        justmd5
  * @license          http://www.justmd5.com
  * @lastmodify       2014-08-30
- * demo：include 'Express.php';echo '<pre>';var_dump(json_decode(Express::getExpressInfo('868124032474'),true));
+ * demo：include 'Express.php';echo '<pre>';var_dump(json_decode(Express::getExpressInfo('7571742361111'),true));
  */
 class Express
 {
