@@ -35,18 +35,17 @@ class Express
      */
     private static function getContent($url)
     {
-        if (function_exists('file_get_contents')) {
-            $file_contents = file_get_contents($url);
-        } else {
+        if(function_exists('curl_init')){
             $ch = curl_init();
-            $timeout = 5;
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
             $file_contents = curl_exec($ch);
             curl_close($ch);
+            return $file_contents;
         }
-        return $file_contents;
+            $file_contents = file_get_contents($url);
+            return $file_contents;
     }
 
     /**获得快递公司名字
