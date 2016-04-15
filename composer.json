@@ -10,7 +10,7 @@
   "minimum-stability":"dev",
   "require": {
     "php": ">=5.5.0",
-    "justmd5/simplehttp": "dev-master"
+    "justmd5/simplehttp": "*"
   },
   "autoload": {
     "psr-4": {
