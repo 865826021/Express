@@ -10,10 +10,10 @@
  * 查询快递接口
  * Class Express
  */
-namespace  JustMd5\express;
+namespace  JustMd5\Express;
 use JustMd5\SimpleHttp\Http;
 
-class express
+class Express
 {
     /**
      *快递查询接口常量
