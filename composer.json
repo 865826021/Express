@@ -11,6 +11,9 @@
     "php": ">=5.5.0",
     "justmd5/simplehttp": "dev-master"
   },
+  "require-dev":{
+    "justmd5/simplehttp": "dev-master"
+  },
   "autoload": {
     "psr-4": {
       "JustMd5\\": "src/"
