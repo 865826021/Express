@@ -1,0 +1,19 @@
+{
+  "name": "justmd5/express",
+  "authors": [
+    {
+      "name": "justmd5",
+      "email": "ding21st@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=5.5.0",
+    "justmd5/simplehttp": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "JustMd5\\": "src/"
+    }
+  }
+}
