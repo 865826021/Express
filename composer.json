@@ -7,7 +7,7 @@
     }
   ],
   "license": "MIT",
-  "minimum-stability":"dev-master",
+  "minimum-stability":"dev",
   "require": {
     "php": ">=5.5.0",
     "justmd5/simplehttp": "dev-master"
