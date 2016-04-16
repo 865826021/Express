@@ -1,7 +1,7 @@
 <?php
 /**
- * Created for express.
- * File: express.php
+ * Created for Express
+ * File: Express.php
  * User: ding21st@gmail.com
  * Date: 16/4/15
  * Time: 下午4:39
@@ -22,34 +22,34 @@ class Express
 
     /**返回快递信息
      *
-     * @param string $order_num 快递单号
+     * @param string $ExpressNumber 快递单号
      *
-     * @return bool|mixed|string 快递信息
+     * @return bool|string 快递信息json数据
      */
-    public static function getExpressInfo($order_num)
+    public static function getExpressInfo($ExpressNumber)
     {
-        $keywords  = self::getExpressName($order_num);
-        $res_names = json_decode($keywords, true);
+        $keywords     = self::getExpressName($ExpressNumber);
+        $ExpressNames = json_decode($keywords, true);
         //未查看到快递信息返回false
-        if (empty($res_names) || !isset($res_names[0]['comCode'])) return false;
+        if (empty($ExpressNames) || !isset($ExpressNames[0]['comCode'])) return false;
 
         //返回查询的信息
         return Http::request('GET', self::KUAIDI100 . '/query', [
-            'type'   => $res_names[0]['comCode'],
-            'postid' => $order_num
+            'type'   => $ExpressNames[0]['comCode'],
+            'postid' => $ExpressNumber
         ]);
 
     }
 
     /**获得快递公司名字
      *
-     * @param string $order_num 订单号
+     * @param string $ExpressNumber 订单号
      *
-     * @return bool 返回订单快递公司名称
+     * @return string 返回订单快递公司名称json数据
      */
-    public static function getExpressName($order_num)
+    public static function getExpressName($ExpressNumber)
     {
-        return Http::request('GET', self::KUAIDI100 . '/autonumber/auto', ['num' => $order_num]);
+        return Http::request('GET', self::KUAIDI100 . '/autonumber/auto', ['num' => $ExpressNumber]);
     }
 }
 
