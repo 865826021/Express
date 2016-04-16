@@ -14,10 +14,9 @@
     }
   ],
   "license": "MIT",
-  "minimum-stability":"dev",
   "require": {
     "php": ">=5.5.0",
-    "justmd5/simplehttp": "dev-master"
+    "justmd5/simplehttp": "1.0.*"
   },
   "autoload": {
     "psr-4": {
