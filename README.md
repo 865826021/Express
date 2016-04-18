@@ -1,4 +1,7 @@
 Express
+
+[![Build Status](https://travis-ci.org/justmd5/Express.svg?branch=master)](https://travis-ci.org/justmd5/Express)
+
 =======
 *基于快递100的快递接口封装*
 #快速简单查询快递信息
