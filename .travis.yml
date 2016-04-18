@@ -11,7 +11,7 @@ php:
 
 before_script:
   - composer self-update
-  - composer install --vvv
+  - composer install -vvv
   - composer dump-autoload --optimize
 script: phpunit --bootstrap phpunit.php
 
