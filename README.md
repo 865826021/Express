@@ -14,3 +14,9 @@ require 'vendor/autoload.php';
 echo var_export(Express::getExpressInfo(881443775034378914), true), PHP_EOL;
 
 ```
+单元测试用法:
+```shell
+phpunit --bootstrap phpunit.php
+```
+*如果测试结果为:OK (5 tests, 9 assertions),则没有问题,若为:FAILURES! Tests: 1, Assertions: 0, Errors: 1, Skipped: 4.则请更换一个最近的快递单号再测试
+*
